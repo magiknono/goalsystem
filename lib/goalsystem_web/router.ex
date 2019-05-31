@@ -27,9 +27,14 @@ defmodule GoalsystemWeb.Router do
 
   scope "/", GoalsystemWeb do
     pipe_through [:browser, :protected]
+    # Add protected routes
+    resources "/goals", GoalController
+  end
+
+  scope "/", GoalsystemWeb do
+    pipe_through :browser
 
     get "/", PageController, :index
-    resources "/goals", GoalController
   end
 
   # Other scopes may use custom stacks.

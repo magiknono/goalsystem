@@ -17,11 +17,12 @@
               <li>Signed in as: <%= @current_user.email %></li>
               <li><%= link "Sign out", to: Routes.pow_session_path(@conn, :delete), method: :delete %></li>
               <li><%= link "Edit account", to: Routes.pow_registration_path(@conn, :edit) %></li>
+              <li><%=  link "Goals", to: Routes.goal_path(@conn, :index) %></li>
             <% else %>
               <li><%= link "Sign in", to: Routes.pow_session_path(@conn, :new) %></li>
               <li><%= link "Sign up", to: Routes.pow_registration_path(@conn, :new) %></li>
             <% end %>
-            <li><%=  link "Goals", to: Routes.goal_path(@conn, :index) %></li>
+            
           </ul>
         </nav>
         <a href="http://phoenixframework.org/" class="phx-logo">
