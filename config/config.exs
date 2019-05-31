@@ -23,7 +23,8 @@ config :goalsystem, :pow,
   repo: Goalsystem.Repo,
   web_module: GoalsystemWeb,
   extensions: [PowPersistentSession],
-  controller_callbacks: Pow.Extension.Phoenix.ControllerCallbacks
+  controller_callbacks: Pow.Extension.Phoenix.ControllerCallbacks,
+  routes_backend: GoalsystemWeb.Pow.Routes
 
 # Configures Elixir's Logger
 config :logger, :console,
