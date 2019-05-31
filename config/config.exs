@@ -20,7 +20,10 @@ config :goalsystem, GoalsystemWeb.Endpoint,
 # Config pow
 config :goalsystem, :pow,
   user: Goalsystem.Users.User,
-  repo: Goalsystem.Repo
+  repo: Goalsystem.Repo,
+  web_module: GoalsystemWeb,
+  extensions: [PowPersistentSession],
+  controller_callbacks: Pow.Extension.Phoenix.ControllerCallbacks
 
 # Configures Elixir's Logger
 config :logger, :console,

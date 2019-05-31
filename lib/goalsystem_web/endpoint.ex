@@ -43,7 +43,7 @@ defmodule GoalsystemWeb.Endpoint do
     signing_salt: "eNT+U0tR"
 
   plug Pow.Plug.Session, otp_app: :goalsystem
-
+  plug PowPersistentSession.Plug.Cookie
 
   plug GoalsystemWeb.Router
 end
