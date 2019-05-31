@@ -42,5 +42,8 @@ defmodule GoalsystemWeb.Endpoint do
     key: "_goalsystem_key",
     signing_salt: "eNT+U0tR"
 
+  plug Pow.Plug.Session, otp_app: :goalsystem
+
+
   plug GoalsystemWeb.Router
 end

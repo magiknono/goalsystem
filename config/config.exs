@@ -17,6 +17,11 @@ config :goalsystem, GoalsystemWeb.Endpoint,
   render_errors: [view: GoalsystemWeb.ErrorView, accepts: ~w(html json)],
   pubsub: [name: Goalsystem.PubSub, adapter: Phoenix.PubSub.PG2]
 
+# Config pow
+config :goalsystem, :pow,
+  user: Goalsystem.Users.User,
+  repo: Goalsystem.Repo
+
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",
